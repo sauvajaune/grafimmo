@@ -33,7 +33,7 @@ security:
     #    - { path: ^/profile, roles: ROLE_USER }
 
     encoders:
-      Symfony\Component\Security\Core\User\User: plaintext
+      #Symfony\Component\Security\Core\User\User: plaintext
       App\Entity\User:
           algorithm: bcrypt
           cost: 12

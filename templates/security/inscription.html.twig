@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'S\'inscrire' %}
+
+{% block body %}
+
+    <div class="container mt-4">
+         {{ form_start(form) }}
+
+        {{ form_row(form.username, {'label':'Nom d\'utilisateur' , 'attr' : {'placeholder':'Saisissez ici votre nom d\'utilisateur'}}) }}
+        {{ form_row(form.password, {'label':'Mot de passe' , 'attr' : {'placeholder':'Saisissez ici votre mot de passe'}}) }}
+
+        <button type="submit" class="btn btn-succes">Inscriprion</button>
+
+                {{ form_end(form) }}
+    </div>
+
+{% endblock %}
