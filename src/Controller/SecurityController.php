@@ -17,6 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Bundle\MonologBundle\SwiftMailer;
 
 class SecurityController extends AbstractController
 {
@@ -38,6 +39,7 @@ class SecurityController extends AbstractController
 
             $manager->persist($user);
             $manager->flush();
+
 
             return $this->redirectToRoute('login');
         }
